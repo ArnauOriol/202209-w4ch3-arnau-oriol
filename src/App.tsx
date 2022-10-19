@@ -1,4 +1,4 @@
-function App() {
+const App = (): JSX.Element => {
   return (
     <div className="container">
       <span className="message">Calling...</span>
@@ -52,6 +52,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;

@@ -42,10 +42,10 @@ function App() {
         </div>
         <div className="actions">
           <span className="number">667359961</span>
-          <a href="#" className="call">
+          <a href="notequejeseslint" className="call">
             Call
           </a>
-          <a href="#" className="hang active">
+          <a href="notequejeseslint" className="hang active">
             Hang
           </a>
         </div>

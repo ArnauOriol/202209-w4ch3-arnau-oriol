@@ -7,9 +7,15 @@ const Keyboard = (): JSX.Element => {
     <div className="keyboard-container">
       <ol className="keyboard">
         {keyboardNumbers.map((numberKey) => {
-          return <Key text={numberKey} className="key" action={() => {}} />;
+          return (
+            <li key={numberKey}>
+              <Key text={numberKey} className="key" action={() => {}} />
+            </li>
+          );
         })}
-        <Key text="delete" className="key big" action={() => {}} />
+        <li key={keyboardNumbers.length + 1}>
+          <Key text="delete" className="key big" action={() => {}} />
+        </li>
       </ol>
     </div>
   );

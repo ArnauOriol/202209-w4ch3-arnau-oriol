@@ -13,12 +13,22 @@ const Keyboard = (): JSX.Element => {
         {keyboardNumbers.map((numberKey) => {
           return (
             <li key={numberKey}>
-              <Key text={numberKey} className="key" action={() => addNumber} />
+              <Key
+                text={numberKey}
+                className="key"
+                action={() => {
+                  addNumber(numberKey);
+                }}
+              />
             </li>
           );
         })}
         <li key={keyboardNumbers.length + 1}>
-          <Key text="delete" className="key big" action={() => deleteNumber} />
+          <Key
+            text="delete"
+            className="key big"
+            action={() => deleteNumber()}
+          />
         </li>
       </ol>
     </div>

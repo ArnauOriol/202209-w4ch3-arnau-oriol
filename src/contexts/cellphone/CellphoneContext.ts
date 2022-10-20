@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 interface CellphoneDisplayStructure {
   displayedNumber: string[];
-  addNumber: () => void;
+  addNumber: (numberToAdd: string) => void;
   deleteNumber: () => void;
 }
 

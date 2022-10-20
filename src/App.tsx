@@ -1,4 +1,5 @@
 import Keyboard from "./components/Keyboard/Keyboard";
+import NumberDisplay from "./components/NumberDisplay/NumberDisplay";
 
 const App = (): JSX.Element => {
   return (
@@ -7,7 +8,7 @@ const App = (): JSX.Element => {
       <main className="phone">
         <Keyboard />
         <div className="actions">
-          <span className="number"></span>
+          <NumberDisplay />
           <a href="notequejeseslint" className="call">
             Call
           </a>

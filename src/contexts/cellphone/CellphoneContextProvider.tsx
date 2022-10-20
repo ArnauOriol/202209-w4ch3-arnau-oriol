@@ -11,11 +11,14 @@ const CellPhoneContextProvider = ({
   const [displayedNumber, setDisplayedNumber] = useState<string[]>([]);
 
   const addNumber = (numberToAdd: string): void => {
+    if (displayedNumber.length === 9) {
+      return;
+    }
     setDisplayedNumber([...displayedNumber, numberToAdd]);
   };
 
   const deleteNumber = (): void => {
-    setDisplayedNumber([...displayedNumber.slice(0, -1)]);
+    setDisplayedNumber(displayedNumber.slice(0, -1));
   };
 
   return (

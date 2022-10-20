@@ -10,9 +10,13 @@ const CellPhoneContextProvider = ({
 }: CellPhoneContextProviderProps): JSX.Element => {
   const [displayedNumber, setDisplayedNumber] = useState<string[]>([]);
 
-  const addNumber = () => {};
+  const addNumber = (numberToAdd: string): void => {
+    setDisplayedNumber([...displayedNumber, numberToAdd]);
+  };
 
-  const deleteNumber = () => {};
+  const deleteNumber = (): void => {
+    setDisplayedNumber([...displayedNumber.slice(0, -1)]);
+  };
 
   return (
     <CellphoneContext.Provider
